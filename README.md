@@ -18,7 +18,7 @@ Hit `prefix + I` to fetch the plugin and source it.
 Clone the repo:
 
 ```sh
-$ git clone https://github.com/TamDik/ip.tmux.git  ~/clone/path
+git clone https://github.com/TamDik/ip.tmux.git  ~/clone/path
 ```
 
 Add this line to the bottom of .tmux.conf:
@@ -27,7 +27,7 @@ Add this line to the bottom of .tmux.conf:
 run-shell ~/clone/path/ip.tmux
 ```
 
-Reload TMUX environment with `$ tmux source-file ~/.tmux.conf`.
+Reload TMUX environment with `tmux source-file ~/.tmux.conf`.
 
 
 ## Usage
