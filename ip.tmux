@@ -1,7 +1,17 @@
 #!/bin/bash
 
 get_ip_address() {
-  echo ip address
+  if type ifconfig > /dev/null 2>&1; then
+    ip="$(ifconfig | grep broadcast | awk '{print $2}' | tail -n1)"
+  elif type hostname > /dev/null 2>&1; then
+    ip="$(hostname -I | awk '{print $1}')"
+  fi
+
+  if [ ! -z "$ip" ]; then
+    echo $ip
+  else
+    echo failed
+  fi
 }
 
 ip_address="$(get_ip_address)"
