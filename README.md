@@ -1,6 +1,6 @@
 # ip.tmux
 
-tmux plugin showing IP address
+tmux plugin showing your IP address in tmux status line
 
 ## Installation with Tmux Plugin Manager (recommended)
 
