@@ -35,5 +35,5 @@ Reload TMUX environment with `tmux source-file ~/.tmux.conf`.
 To display the IP address in the tmux status line, add `#{ip}`.
 
 ```
-set -g status-left "#{ip} | #S"
+set -g status-left "#{ip}"
 ```
