@@ -2,9 +2,9 @@
 
 get_ip_address() {
   if type ifconfig > /dev/null 2>&1; then
-    ip="$(ifconfig | grep broadcast | awk '{print $2}' | tail -n1)"
+    ip="$(ifconfig | grep broadcast | awk '{print $2}' | head -n1)"
   elif type ip > /dev/null 2>&1; then
-    ip="$(ip -o a | grep brd | awk '{print $4}' | tail -n1)"
+    ip="$(ip -o a | grep brd | awk '{print $4}' | head -n1)"
   elif type hostname > /dev/null 2>&1; then
     ip="$(hostname -I | awk '{print $1}')"
   fi
